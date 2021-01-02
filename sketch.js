@@ -19,7 +19,7 @@ function setup() {
 	world = engine.world;
 
 	tree = new Tree(1050,580);
-
+	
 
 /*var render = Render.create({
 	element:document.Body,
