@@ -19,7 +19,7 @@ class Tree{
         
         fill(255)
         imageMode(CENTER)
-        this.image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
+    image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
         pop()
     }
 }
