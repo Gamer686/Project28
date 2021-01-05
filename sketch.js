@@ -7,9 +7,10 @@ const Body = Matter.Body;
 const Constraint = Matter.Constraint;*/
 var tree;
 var mango1,mango2,mango3,mango4,mango5,mango6,mango7,mango8,mango9,mango10,mango11,mango12;
+var boy;
 function preload()
 {
-	
+	boy=loadImage("boy.png");
 }
 
 function setup() {
@@ -18,7 +19,9 @@ function setup() {
 
 	engine = Engine.create();
 	world = engine.world;
-
+	
+	
+	
 	tree = new Tree(1050,300);
 	mango1= new Mango(1100,100,30);
 	mango2= new Mango(1170,130,30);
@@ -48,6 +51,8 @@ function setup() {
 
 
 function draw() {
+	background(230);
+	boy.createSprite=(200,340,200,300);
   rectMode(CENTER);
   background(0);
   tree.display();

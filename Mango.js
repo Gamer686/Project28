@@ -20,7 +20,7 @@ class Mango{
         fill(255,0,255)
         imageMode(CENTER)
         ellipseMode(CENTER)
-        this.image(this.image,0,0,this.r*2,this.r*2)
+        image(this.image,0,0,this.r*2,this.r*2)
         pop()
     }
 
