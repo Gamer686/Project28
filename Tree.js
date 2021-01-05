@@ -3,9 +3,9 @@ class Tree{
         this.x=x;
         this.y=y;
         this.width=450;
-        this.height=600;
+        this.height=500;
     
-        this.image=loadImage("tree.js")
+        this.image=loadImage("tree.png")
         this.body=Bodies.rectangle(this.x,this.y,this.width,this.height,{isStatic:true})
         
         World.add(world,this.body);
