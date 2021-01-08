@@ -52,7 +52,7 @@ function setup() {
 
 function draw() {
 	background(230);
-	boy.createSprite=(200,340,200,300);
+	image(boy,200,340,200,300);
   rectMode(CENTER);
   background(0);
   tree.display();
