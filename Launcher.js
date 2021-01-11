@@ -1,4 +1,4 @@
-class launcher{
+class Launcher{
     constructor(body,anchor){
         var options={
             bodyA:body,
