@@ -4,12 +4,15 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Render = Matter.Render;
-/*const Constraint = Matter.Constraint;*/
+const Constraint = Matter.Constraint;
 var tree;
+
 var mango1,mango2,mango3,mango4,mango5,mango6,mango7,mango8,mango9,mango10,mango11,mango12;
 var boy;
 var ground;
 var stone;
+var launcher;
+//var launchingForce=100;
 function preload()
 {
 	boy=loadImage("boy.png");
@@ -22,7 +25,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	
-	
+	launcher= new Launcher(stone.body,{x:235,y:420})
 	stone=new Stone(235,420,30);
 	tree = new Tree(1050,300);
 	mango1= new Mango(1100,100,10);
@@ -38,7 +41,7 @@ function setup() {
 	mango11= new Mango(1120,50,20);
 	mango12= new Mango(900,160,10);
  ground= new Ground(width/2,600,width,20);
-var render = Render.create({
+  var render = Render.create({
 	element:document.Body,
 	engine:engine,
 	options:{
@@ -71,6 +74,7 @@ function draw() {
   mango10.display();
   mango11.display();
   mango12.display();
+  launcher.display();
 
   drawSprites();
  
