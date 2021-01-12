@@ -4,7 +4,7 @@ class Launcher{
             bodyA:body,
             pointB:anchor,
             stiffness:0.04,
-            lenght:1
+            length:1
         }
         this.bodyA=body
         this.pointB=anchor
