@@ -6,7 +6,7 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 const Constraint = Matter.Constraint;
 var tree;
-var dis;
+
 var mango1,mango2,mango3,mango4,mango5,mango6,mango7,mango8,mango9,mango10,mango11,mango12;
 var boy;
 var ground;
@@ -28,7 +28,7 @@ function setup() {
 
 	
 
-	tree = new Tree(1050,300);
+	tree = new Tree(1050,350);
 	mango1= new Mango(1100,100,10);
 	mango2= new Mango(1170,130,15);
 	mango3= new Mango(1010,140,20);
@@ -52,6 +52,7 @@ function setup() {
 		height: 600,
 		wireframes:false
 	}
+
 });
 	Engine.run(engine);
   
@@ -93,7 +94,7 @@ function draw() {
   detectCollision(stone,mango8);
   detectCollision(stone,mango9);
   detectCollision(stone,mango10);
-  detecteCollision(stone,mango11);
+  detectCollision(stone,mango11);
   detectCollision(stone,mango12);
 
 
@@ -113,12 +114,12 @@ function keyPressed(){
 	}
 }
 function detectCollision(lstone,lmango){
-	mangoBodyPosition=lmango.body.Position
+	mangoBodyPosition=lmango.body.position
 	stoneBodyPosition=lstone.body.position
 
-	var distance= dis(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
+	var distance= dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
 	if(distance<=lmango.r+lstone.r){
-		Matter.Body.setStatic(lmango.body,flase);
+		Matter.Body.setStatic(lmango.body,false);
 	}
 }
 

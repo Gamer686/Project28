@@ -6,7 +6,7 @@ class Tree{
         this.height=600;
     
         this.image=loadImage("tree.png")
-        this.body=Bodies.rectangle(this.x,this.y,this.width,this.height,{isStatic:true})
+        this.body=Bodies.rectangle(this.x,this.y,20,200,{isStatic:true})
         
         World.add(world,this.body);
         
@@ -19,7 +19,7 @@ class Tree{
         
         fill(255)
         imageMode(CENTER)
-    image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
+    image(this.image,this.body.position.x,this.body.position.y-80,this.width,this.height)
         pop()
     }
 }
